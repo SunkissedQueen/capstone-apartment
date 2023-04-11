@@ -39,3 +39,5 @@
 - https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/apartment-app/react-in-rails.md
 - React routes https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/cat-tinder/frontend/intro.md
 - Rails routes 
+- mock data  https://github.com/learn-academy-2022-hotel/apartment-app-instructors/blob/main/app/javascript/components/mockApartments.js
+- 
