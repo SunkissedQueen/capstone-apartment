@@ -33,3 +33,9 @@
        
      * Not required *
 ```
+
+## Resources
+- https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/apartment-app/apartment-app.md
+- https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/apartment-app/react-in-rails.md
+- React routes https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/cat-tinder/frontend/intro.md
+- Rails routes 
