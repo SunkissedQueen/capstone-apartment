@@ -66,3 +66,7 @@ end
 
 
 gem "rspec-rails", "~> 6.0"
+
+gem "webpacker", "~> 5.4"
+
+gem "react-rails", "~> 2.6"
