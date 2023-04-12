@@ -1,22 +1,22 @@
 import React from "react"
 import { Button, Card, CardBody, CardTitle } from "reactstrap"
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-const ApartmentIndex = ({apartments}) => {
-  return(
-    <main className="cat-index-cards">
+const ApartmentIndex = ({ apartments }) => {
+  return (
+    <main>
       <h3>ApartmentIndex page</h3>
       {apartments?.map((apartment, index) => {
         return (
           <Card
-            style={{width: "300"}} key={index}
+            style={{ width: "300" }} key={index}
           >
-            <img 
+            <img
               className="card"
-              src={apartment.image} 
+              src={apartment.image}
               alt="image of apartment"
               height="200"
-              width="300" 
+              width="300"
             />
             <CardBody>
               <CardTitle tag="h5">

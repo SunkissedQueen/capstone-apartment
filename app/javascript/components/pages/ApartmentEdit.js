@@ -1,7 +1,7 @@
 import React from "react"
 
 const ApartmentEdit = () => {
-  return(
+  return (
     <main>
       <h3>ApartmentEdit page</h3>
     </main>

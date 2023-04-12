@@ -1,19 +1,19 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 
-const ApartmentShow = ({apartments}) => {
+const ApartmentShow = ({ apartments }) => {
   const { id } = useParams()
   const currentApt = apartments?.find((apt) => {
     // console.log(apt)
-    return apt.id === +id})
+    return apt.id === +id
+  })
   // console.log(id, currentApt)
 
-  return(
-    <main className="cat-show-cards">
+  return (
+    <main className="cards">
     {currentApt && (
       <>
         <img
-          className="apt-show-img"
           src={currentApt.image}
           alt={`profile of an apt located in ${currentApt.city}, ${currentApt.state}`}
           height="100"

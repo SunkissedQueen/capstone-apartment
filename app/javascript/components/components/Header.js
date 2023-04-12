@@ -1,7 +1,7 @@
 import React from "react"
 
 const Header = () => {
-  return(
+  return (
     <main>
       <h3>Header component</h3>
     </main>
