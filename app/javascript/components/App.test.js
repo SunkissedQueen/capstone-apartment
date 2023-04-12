@@ -1,23 +1,23 @@
 // imports
-import React from "react";
-import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from "react-router-dom";
+import React from "react"
+import { render, screen } from "@testing-library/react"
+import { BrowserRouter } from "react-router-dom"
 // import userEvent from "@testing-library/user-event";
 
 // component
 import App from "./App"
 
 // custom jest matchers
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom"
 
 describe("<App />", () => {
   it("renders a greeting", () => {
     // arrange
-    render(<App />) //[Error: You cannot render a <Router> inside another <Router>. You should never have more than one in your app.]
+    render(<App />) // [Error: You cannot render a <Router> inside another <Router>. You should never have more than one in your app.]
     // screen.debug()
     // screen.logTestingPlaygroundURL()
     // act
-    const greeting = screen.getByRole('heading', {
+    const greeting = screen.getByRole("heading", {
       name: /sky/i
     })
     // assert
