@@ -13,7 +13,11 @@ const App = () => {
   console.log(apartments)
 
   const createApartment = (apartment) => {
-    console.log(apartment)
+    console.log(apartment, "This apartment has been created")
+  }
+
+  const updateApt = (updatedApt, id) => {
+    console.log(updatedApt,"This apartment has been modified")
   }
 
   return (
@@ -24,7 +28,7 @@ const App = () => {
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
         <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />
-        <Route path="/apartmentedit" element={<ApartmentEdit />} />
+        <Route path="/apartmentedit/:id" element={<ApartmentEdit apartments={apartments} updateApt={updateApt} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
