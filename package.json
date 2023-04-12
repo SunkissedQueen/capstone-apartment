@@ -16,8 +16,10 @@
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.21.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "eslint": "^8.38.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "^27.2.1",
@@ -30,7 +32,21 @@
   },
   "scripts": {
     "test": "jest",
+    "test-watch": "jest --watch",
     "coverage": "jest --coverage",
     "lint": "eslint"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "roots": [
+      "app/javascript/components"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/app/javascript/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/app/javascript/__mocks__/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
   }
 }

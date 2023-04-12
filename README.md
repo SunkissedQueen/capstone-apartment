@@ -39,7 +39,8 @@
 - https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/apartment-app/react-in-rails.md
 - React routes https://github.com/learn-academy-2023-bravo/Syllabus/blob/main/cat-tinder/frontend/intro.md
 - Rails routes 
-- mock data  https://github.com/learn-academy-2022-hotel/apartment-app-instructors/blob/main/app/javascript/components/mockApartments.js
+- mock data  
+- remember to give an id, https://github.com/learn-academy-2022-hotel/apartment-app-instructors/blob/main/app/javascript/components/mockApartments.js
 - Adding react testing library https://dev.to/ivadyhabimana/setup-jest-and-react-testing-library-in-a-react-project-a-step-by-step-guide-1mf0
   - $ yarn add --dev @testing-library/react @testing-library/jest-dom
   - $ yarn add --dev jest jest-environment-jsdom
@@ -51,7 +52,7 @@
   - in the package.json, add the following scripts
 - Adding standard rb
   - Install Standard by adding it to your Gemfile and running bundle install:
-  `gem "standard", group: [:development, :test]`
+  `gem 'standardrb', '~> 1.0'`
   - Run `standardrb` to check for errors 
   - Run `standardrb --fix` to fix errors
   - Run `yarn lint .`

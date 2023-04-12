@@ -73,6 +73,6 @@ gem "react-rails", "~> 2.6"
 
 gem "devise", "~> 4.9"
 
-gem "standard", group: [:development, :test]
+gem 'standardrb', '~> 1.0'
 
 gem "bootstrap", "~> 5.2"
