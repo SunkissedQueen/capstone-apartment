@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 import ApartmentEdit from "./pages/ApartmentEdit"
 import ApartmentIndex from "./pages/ApartmentIndex"
 import ApartmentNew from "./pages/ApartmentNew"
@@ -8,6 +9,7 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import mockApartments from "./mockApartments"
 import "./App.css"
+
 const App = () => {
   const [apartments, setApartments] = useState(mockApartments)
   console.log(apartments)
@@ -20,13 +22,17 @@ const App = () => {
     console.log(updatedApt,"This apartment has been modified")
   }
 
+  const deleteApt = (id) => {
+    console.log(id, "This apartment has been deleted")
+  }
+
   return (
     <BrowserRouter>
       <h1>Sky Ground</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
-        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
+        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} deleteApt={deleteApt}/>} />
         <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />
         <Route path="/apartmentedit/:id" element={<ApartmentEdit apartments={apartments} updateApt={updateApt} />} />
         <Route path="*" element={<NotFound />} />

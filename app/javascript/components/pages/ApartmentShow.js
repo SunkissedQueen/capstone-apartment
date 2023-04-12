@@ -1,14 +1,20 @@
 import React from "react"
-import { useParams, NavLink } from "react-router-dom"
+import { useParams, NavLink, useNavigate } from "react-router-dom"
 import { Button } from "reactstrap"
 
-const ApartmentShow = ({ apartments }) => {
+const ApartmentShow = ({ apartments, deleteApt }) => {
   const { id } = useParams()
+  const navigate = useNavigate()
+  
   const currentApt = apartments?.find((apt) => {
     // console.log(apt)
     return apt.id === +id
   })
   // console.log(id, currentApt)
+  const handleDelete = () => {
+    deleteApt(currentApt.id)
+    navigate("/apartmentindex")
+  }
 
   return (
     <main className="cards">
@@ -35,6 +41,9 @@ const ApartmentShow = ({ apartments }) => {
           <NavLink to={`/apartmentedit/${currentApt.id}`} className="nav-link">
             Modify Apartment
           </NavLink>
+        </Button>
+        <Button onClick={handleDelete} name="submit">
+          Delete Apartment
         </Button>
       </>
     )}
