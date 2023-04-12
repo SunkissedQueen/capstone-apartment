@@ -1,5 +1,6 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, NavLink } from "react-router-dom"
+import { Button } from "reactstrap"
 
 const ApartmentShow = ({ apartments }) => {
   const { id } = useParams()
@@ -30,7 +31,11 @@ const ApartmentShow = ({ apartments }) => {
         <p>Monthly rate: ${currentApt.price}/month</p>
 
         <p>Contact {currentApt.manager} at {currentApt.email}</p>
-
+        <Button>
+          <NavLink to={`/apartmentedit/${currentApt.id}`} className="nav-link">
+            Modify Apartment
+          </NavLink>
+        </Button>
       </>
     )}
   </main>
